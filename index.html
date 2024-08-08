@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="w-[60%] m-auto pt-8">
+    <div class="flex justify-between pb-3">
+      <input type="text" placeholder="Search..." class="border py-1 px-2 outline-none" id="search">
+      <button id="add_user" class="bg-blue-600 text-white px-4 py-1 rounded">Add user</button>
+    </div>
+    <div>
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="border">T/H</th>
+            <th class="border">Fist name</th>
+            <th class="border">Last name</th>
+            <th class="border">Age</th>
+            <th class="border">Phone number</th>
+            <th class="border">Email</th>
+            <th class="border">Action</th>
+          </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="madal"
+    class="hidden madal w-full h-[100vh] fixed top-0 left-0 justify-center items-center text-white bg-[rgba(0,0,0,0.5)]">
+    <div class="madal_container w-1/4 bg-blue-200 p-4">
+      <form id="form" class="w-full flex flex-col gap-1">
+        <input required type="text" name="first_name" placeholder="Fisrt name"
+          class="border outline-none w-full text-black focus:border-blue-600 py-1 px-2" onkeyup="handelChange(event)">
+        <input required type="text" name="last_name" placeholder="Last name"
+          class="border outline-none w-full text-black focus:border-blue-600 py-1 px-2" onkeyup="handelChange(event)">
+        <input required type="number" name="age" placeholder="Age"
+          class="border outline-none w-full text-black focus:border-blue-600 py-1 px-2" onkeyup="handelChange(event)">
+        <input required type="text" name="phone_number" placeholder="Phone number"
+          class="border outline-none w-full text-black focus:border-blue-600 py-1 px-2" onkeyup="handelChange(event)">
+        <input required type="text" name="email" placeholder="Email"
+          class="border outline-none w-full text-black focus:border-blue-600 py-1 px-2" onkeyup="handelChange(event)">
+        <div class="flex gap-2 w-full">
+          <button id="save" class="bg-blue-900 w-1/2 py-1 text-lg">Save</button>
+          <button id="close" class="bg-red-400 w-1/2 py-1 text-lg">Close</button>
+          <button id="remove" class="bg-green-500 w-1/2 py-1 text-lg">Remove</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
